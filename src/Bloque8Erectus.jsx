@@ -4,14 +4,14 @@ export default function Bloque8Erectus({ onBack, onNext }) {
   const [respuesta, setRespuesta] = useState(null);
 
   const opciones = [
-    { texto: "Fue el primero en usar celulares", correcta: false },
-    { texto: "Dominó el fuego y viajó fuera de África", correcta: true },
-    { texto: "Vivió solamente en los árboles", correcta: false },
-    { texto: "No usaba herramientas", correcta: false },
+    { texto: "Volar grandes distancias", correcta: false },
+    { texto: "Dominar el fuego y viajar", correcta: true },
+    { texto: "Vivir solo en árboles", correcta: false },
+    { texto: "Ser el más fuerte", correcta: false },
   ];
 
   return (
-    <section className="relative min-h-screen w-screen overflow-hidden bg-black text-white">
+    <section className="pantalla-bloque">
       <img
         src="/imagenes/homo-erectus.jpg"
         alt="Homo erectus y el fuego"
@@ -21,75 +21,75 @@ export default function Bloque8Erectus({ onBack, onNext }) {
       <div className="absolute inset-0 bg-black/55" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_20%,rgba(0,0,0,0.9)_100%)]" />
 
-      <div className="relative z-10 grid min-h-screen grid-cols-1 gap-8 px-8 py-8 md:grid-cols-[1fr_430px]">
+      <div className="layout-bloque">
+        {/* TEXTO */}
         <div className="flex flex-col justify-center">
           <p className="mb-4 text-sm uppercase tracking-[0.45em] text-amber-600">
-            Bloque 8
+            Bloque 9
           </p>
 
-          <h2 className="font-serif text-5xl font-black uppercase leading-[0.95] tracking-[0.16em] text-stone-100 md:text-7xl">
+          <h2 className="titulo-bloque">
             El fuego
             <br />
             lo cambió todo
           </h2>
 
-          <div className="my-8 flex items-center gap-5 text-amber-700">
-            <span className="h-px w-24 bg-amber-700/70" />
-            <span className="text-3xl">◇</span>
-            <span className="h-px w-24 bg-amber-700/70" />
+          <div className="my-6 flex items-center gap-4 text-amber-700 md:my-8 md:gap-5">
+            <span className="h-px w-16 bg-amber-700/70 md:w-24" />
+            <span className="text-2xl md:text-3xl">◇</span>
+            <span className="h-px w-16 bg-amber-700/70 md:w-24" />
           </div>
 
-          <p className="max-w-3xl text-2xl leading-relaxed text-stone-200">
-            Con <span className="font-bold italic">Homo erectus</span>, la historia humana dio
-            un salto enorme: cuerpos más altos, caminatas largas, herramientas más elaboradas
-            y la expansión fuera de África.
+          <p className="texto-bloque">
+            Con Homo erectus, la evolución humana dio un salto enorme.
           </p>
 
-          <p className="mt-6 max-w-3xl text-xl leading-relaxed text-amber-100">
-            El fuego permitió cocinar, protegerse, reunirse y habitar nuevos ambientes.
-            No solo calentó el cuerpo: también reunió al grupo.
+          <p className="mt-4 max-w-3xl text-base leading-relaxed text-amber-100 md:mt-6 md:text-xl">
+            El dominio del fuego permitió cocinar, protegerse y reunirse.
+            Además, fue una de las primeras especies en salir de África.
           </p>
 
-          <div className="mt-8 grid max-w-4xl gap-4 md:grid-cols-3">
-            <div className="rounded-2xl border border-amber-900/50 bg-stone-950/55 p-5 backdrop-blur-md">
-              <p className="font-serif text-sm uppercase tracking-[0.25em] text-amber-600">
-                Viaje
-              </p>
-              <p className="mt-2 text-stone-200">
-                Fue uno de los primeros homínidos en salir de África.
-              </p>
-            </div>
-
-            <div className="rounded-2xl border border-amber-900/50 bg-stone-950/55 p-5 backdrop-blur-md">
-              <p className="font-serif text-sm uppercase tracking-[0.25em] text-amber-600">
+          <div className="mt-6 grid max-w-4xl gap-3 md:grid-cols-3 md:gap-4">
+            <div className="rounded-2xl border border-amber-900/50 bg-stone-950/55 p-4 backdrop-blur-md">
+              <p className="font-serif text-xs uppercase tracking-[0.25em] text-amber-600 md:text-sm">
                 Fuego
               </p>
-              <p className="mt-2 text-stone-200">
-                Cocinar dio más energía y ayudó a sobrevivir.
+              <p className="mt-1 text-sm text-stone-200 md:text-base">
+                Calor, protección y cocina.
               </p>
             </div>
 
-            <div className="rounded-2xl border border-amber-900/50 bg-stone-950/55 p-5 backdrop-blur-md">
-              <p className="font-serif text-sm uppercase tracking-[0.25em] text-amber-600">
+            <div className="rounded-2xl border border-amber-900/50 bg-stone-950/55 p-4 backdrop-blur-md">
+              <p className="font-serif text-xs uppercase tracking-[0.25em] text-amber-600 md:text-sm">
+                Viaje
+              </p>
+              <p className="mt-1 text-sm text-stone-200 md:text-base">
+                Expansión fuera de África.
+              </p>
+            </div>
+
+            <div className="rounded-2xl border border-amber-900/50 bg-stone-950/55 p-4 backdrop-blur-md">
+              <p className="font-serif text-xs uppercase tracking-[0.25em] text-amber-600 md:text-sm">
                 Grupo
               </p>
-              <p className="mt-2 text-stone-200">
-                Alrededor del fuego se fortalecieron los vínculos.
+              <p className="mt-1 text-sm text-stone-200 md:text-base">
+                Reunión social alrededor del fuego.
               </p>
             </div>
           </div>
         </div>
 
-        <aside className="flex max-h-[calc(100vh-4rem)] flex-col justify-center rounded-[2rem] border border-amber-900/50 bg-stone-950/65 p-6 shadow-2xl backdrop-blur-md">
+        {/* PANEL */}
+        <aside className="panel-juego">
           <p className="mb-3 font-serif text-sm uppercase tracking-[0.35em] text-amber-600">
             Juego colectivo
           </p>
 
-          <h3 className="font-serif text-2xl font-black uppercase tracking-[0.08em] text-stone-100">
+          <h3 className="font-serif text-xl font-black uppercase tracking-[0.08em] text-stone-100 md:text-2xl">
             ¿Qué hizo especial a Homo erectus?
           </h3>
 
-          <div className="mt-5 grid gap-3">
+          <div className="mt-4 grid gap-3 md:mt-5">
             {opciones.map((opcion, index) => {
               const seleccionada = respuesta === index;
               const mostrarCorrecta = respuesta !== null && opcion.correcta;
@@ -98,7 +98,7 @@ export default function Bloque8Erectus({ onBack, onNext }) {
                 <button
                   key={index}
                   onClick={() => setRespuesta(index)}
-                  className={`rounded-2xl border px-5 py-3 text-left font-serif text-base uppercase tracking-[0.12em] transition ${
+                  className={`rounded-2xl border px-4 py-3 text-left font-serif text-sm uppercase tracking-[0.12em] transition md:px-5 md:text-base ${
                     mostrarCorrecta
                       ? "border-emerald-500 bg-emerald-900/50 text-emerald-100"
                       : seleccionada
@@ -114,24 +114,24 @@ export default function Bloque8Erectus({ onBack, onNext }) {
 
           {respuesta !== null && (
             <>
-              <div className="mt-5 rounded-2xl border border-amber-900/50 bg-black/40 p-4">
-                <p className="text-lg text-amber-100">
-                  La clave fue el fuego y la expansión.
+              <div className="mt-4 rounded-2xl border border-amber-900/50 bg-black/40 p-4 md:mt-5">
+                <p className="text-amber-100">
+                  La clave fue el fuego.
                 </p>
-                <p className="mt-2 text-sm leading-relaxed text-stone-300">
-                  Homo erectus pudo cocinar, protegerse, viajar y adaptarse a distintos
-                  ambientes. Fue una de las especies humanas más exitosas.
+                <p className="mt-2 text-sm text-stone-300">
+                  El fuego permitió sobrevivir en nuevos ambientes, mejorar la alimentación
+                  y fortalecer los vínculos sociales.
                 </p>
               </div>
 
-              <button onClick={onNext} className="group boton-paleo mt-5">
+              <button onClick={onNext} className="group boton-paleo mt-4 md:mt-5">
                 <span className="boton-overlay" />
                 <span className="relative">Siguiente etapa →</span>
               </button>
             </>
           )}
 
-          <button onClick={onBack} className="group boton-paleo mt-5">
+          <button onClick={onBack} className="group boton-paleo mt-4 md:mt-5">
             <span className="boton-overlay" />
             <span className="relative">← Volver</span>
           </button>

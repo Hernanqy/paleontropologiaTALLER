@@ -11,83 +11,85 @@ export default function Bloque6Australopithecus({ onBack, onNext }) {
   ];
 
   return (
-    <section className="relative min-h-screen w-screen overflow-hidden bg-black text-white">
+    <section className="pantalla-bloque">
       <img
         src="/imagenes/australopithecus.jpg"
-        alt="Australopithecus caminando en África"
+        alt="Australopithecus caminando"
         className="absolute inset-0 h-full w-full object-cover"
       />
 
       <div className="absolute inset-0 bg-black/55" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_20%,rgba(0,0,0,0.9)_100%)]" />
 
-      <div className="relative z-10 grid min-h-screen grid-cols-1 gap-8 px-8 py-8 md:grid-cols-[1fr_430px]">
+      <div className="layout-bloque">
+        {/* TEXTO */}
         <div className="flex flex-col justify-center">
           <p className="mb-4 text-sm uppercase tracking-[0.45em] text-amber-600">
             Bloque 6
           </p>
 
-          <h2 className="font-serif text-5xl font-black uppercase leading-[0.95] tracking-[0.16em] text-stone-100 md:text-7xl">
+          <h2 className="titulo-bloque">
             Nuestros
             <br />
             primeros pasos
           </h2>
 
-          <div className="my-8 flex items-center gap-5 text-amber-700">
-            <span className="h-px w-24 bg-amber-700/70" />
-            <span className="text-3xl">◇</span>
-            <span className="h-px w-24 bg-amber-700/70" />
+          <div className="my-6 flex items-center gap-4 text-amber-700 md:my-8 md:gap-5">
+            <span className="h-px w-16 bg-amber-700/70 md:w-24" />
+            <span className="text-2xl md:text-3xl">◇</span>
+            <span className="h-px w-16 bg-amber-700/70 md:w-24" />
           </div>
 
-          <p className="max-w-3xl text-2xl leading-relaxed text-stone-200">
-            En África, algunos homínidos se adaptaron cada vez más a la vida en el suelo.
+          <p className="texto-bloque">
+            Algunos homínidos comenzaron a vivir cada vez más en el suelo.
           </p>
 
-          <p className="mt-6 max-w-3xl text-xl leading-relaxed text-amber-100">
+          <p className="mt-4 max-w-3xl text-base leading-relaxed text-amber-100 md:mt-6 md:text-xl">
             <span className="font-bold italic">Australopithecus</span> caminaba en dos piernas,
-            pero aún conservaba habilidades para trepar.
+            aunque aún conservaba habilidades para trepar.
           </p>
 
-          <div className="mt-8 grid max-w-4xl gap-4 md:grid-cols-3">
-            <div className="rounded-2xl border border-amber-900/50 bg-stone-950/55 p-5 backdrop-blur-md">
-              <p className="font-serif text-sm uppercase tracking-[0.25em] text-amber-600">
+          <div className="mt-6 grid max-w-4xl gap-3 md:grid-cols-3 md:gap-4">
+            <div className="rounded-2xl border border-amber-900/50 bg-stone-950/55 p-4 backdrop-blur-md">
+              <p className="font-serif text-xs uppercase tracking-[0.25em] text-amber-600 md:text-sm">
                 Antigüedad
               </p>
-              <p className="mt-2 text-stone-200">
-                Vivió hace entre 4 y 2 millones de años aproximadamente.
+              <p className="mt-1 text-sm text-stone-200 md:text-base">
+                Entre 4 y 2 millones de años.
               </p>
             </div>
 
-            <div className="rounded-2xl border border-amber-900/50 bg-stone-950/55 p-5 backdrop-blur-md">
-              <p className="font-serif text-sm uppercase tracking-[0.25em] text-amber-600">
+            <div className="rounded-2xl border border-amber-900/50 bg-stone-950/55 p-4 backdrop-blur-md">
+              <p className="font-serif text-xs uppercase tracking-[0.25em] text-amber-600 md:text-sm">
                 Movimiento
               </p>
-              <p className="mt-2 text-stone-200">
-                Caminaba erguido, liberando las manos.
+              <p className="mt-1 text-sm text-stone-200 md:text-base">
+                Caminaba erguido.
               </p>
             </div>
 
-            <div className="rounded-2xl border border-amber-900/50 bg-stone-950/55 p-5 backdrop-blur-md">
-              <p className="font-serif text-sm uppercase tracking-[0.25em] text-amber-600">
+            <div className="rounded-2xl border border-amber-900/50 bg-stone-950/55 p-4 backdrop-blur-md">
+              <p className="font-serif text-xs uppercase tracking-[0.25em] text-amber-600 md:text-sm">
                 Dieta
               </p>
-              <p className="mt-2 text-stone-200">
-                Frutos, hojas, semillas, raíces e insectos.
+              <p className="mt-1 text-sm text-stone-200 md:text-base">
+                Frutos, hojas e insectos.
               </p>
             </div>
           </div>
         </div>
 
-        <aside className="flex max-h-[calc(100vh-4rem)] flex-col justify-center rounded-[2rem] border border-amber-900/50 bg-stone-950/65 p-6 shadow-2xl backdrop-blur-md">
+        {/* PANEL */}
+        <aside className="panel-juego">
           <p className="mb-3 font-serif text-sm uppercase tracking-[0.35em] text-amber-600">
             Juego colectivo
           </p>
 
-          <h3 className="font-serif text-2xl font-black uppercase tracking-[0.08em] text-stone-100">
-            ¿Qué característica diferencia a Australopithecus de otros primates?
+          <h3 className="font-serif text-xl font-black uppercase tracking-[0.08em] text-stone-100 md:text-2xl">
+            ¿Qué lo hacía diferente?
           </h3>
 
-          <div className="mt-5 grid gap-3">
+          <div className="mt-4 grid gap-3 md:mt-5">
             {opciones.map((opcion, index) => {
               const seleccionada = respuesta === index;
               const mostrarCorrecta = respuesta !== null && opcion.correcta;
@@ -96,7 +98,7 @@ export default function Bloque6Australopithecus({ onBack, onNext }) {
                 <button
                   key={index}
                   onClick={() => setRespuesta(index)}
-                  className={`rounded-2xl border px-5 py-3 text-left font-serif text-base uppercase tracking-[0.12em] transition ${
+                  className={`rounded-2xl border px-4 py-3 text-left font-serif text-sm uppercase tracking-[0.12em] transition md:px-5 md:text-base ${
                     mostrarCorrecta
                       ? "border-emerald-500 bg-emerald-900/50 text-emerald-100"
                       : seleccionada
@@ -112,24 +114,23 @@ export default function Bloque6Australopithecus({ onBack, onNext }) {
 
           {respuesta !== null && (
             <>
-              <div className="mt-5 rounded-2xl border border-amber-900/50 bg-black/40 p-4">
-                <p className="text-lg text-amber-100">
+              <div className="mt-4 rounded-2xl border border-amber-900/50 bg-black/40 p-4 md:mt-5">
+                <p className="text-amber-100">
                   La clave fue caminar erguido.
                 </p>
-                <p className="mt-2 text-sm leading-relaxed text-stone-300">
-                  Australopithecus muestra una etapa fundamental: ya no éramos simios
-                  completamente arborícolas, pero todavía no éramos humanos modernos.
+                <p className="mt-2 text-sm text-stone-300">
+                  Este cambio permitió liberar las manos y explorar nuevas formas de interacción con el entorno.
                 </p>
               </div>
 
-              <button onClick={onNext} className="group boton-paleo mt-5">
+              <button onClick={onNext} className="group boton-paleo mt-4 md:mt-5">
                 <span className="boton-overlay" />
                 <span className="relative">Siguiente etapa →</span>
               </button>
             </>
           )}
 
-          <button onClick={onBack} className="group boton-paleo mt-5">
+          <button onClick={onBack} className="group boton-paleo mt-4 md:mt-5">
             <span className="boton-overlay" />
             <span className="relative">← Volver</span>
           </button>

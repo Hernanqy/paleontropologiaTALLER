@@ -11,57 +11,54 @@ export default function Bloque2Mamiferos({ onBack, onNext }) {
   ];
 
   return (
-    <section className="relative min-h-screen w-screen overflow-hidden bg-black text-white">
-      
-      {/* IMAGEN */}
+    <section className="pantalla-bloque">
       <img
         src="/imagenes/purgatorius-mamiferos.jpg"
         alt="Mamíferos primitivos"
         className="absolute inset-0 h-full w-full object-cover"
       />
 
-      {/* CAPAS */}
       <div className="absolute inset-0 bg-black/55" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_18%,rgba(0,0,0,0.9)_100%)]" />
 
-      <div className="relative z-10 grid min-h-screen grid-cols-1 gap-8 px-8 py-10 md:grid-cols-[1fr_430px]">
-        
-        {/* TEXTO */}
+      <div className="layout-bloque">
         <div className="flex flex-col justify-center">
           <p className="mb-4 text-sm uppercase tracking-[0.45em] text-amber-600">
             Bloque 2
           </p>
 
-          <h2 className="font-serif text-5xl font-black uppercase leading-[0.95] tracking-[0.16em] text-stone-100 md:text-7xl">
+          <h2 className="titulo-bloque">
             Los pequeños
             <br />
             herederos
           </h2>
 
-          <div className="my-8 flex items-center gap-5 text-amber-700">
-            <span className="h-px w-24 bg-amber-700/70" />
-            <span className="text-3xl">◇</span>
-            <span className="h-px w-24 bg-amber-700/70" />
+          <div className="my-6 flex items-center gap-4 text-amber-700 md:my-8 md:gap-5">
+            <span className="h-px w-16 bg-amber-700/70 md:w-24" />
+            <span className="text-2xl md:text-3xl">◇</span>
+            <span className="h-px w-16 bg-amber-700/70 md:w-24" />
           </div>
 
-          <p className="max-w-3xl text-2xl leading-relaxed text-stone-200">
+          <p className="texto-bloque">
             Tras la extinción de los dinosaurios, los mamíferos comenzaron a expandirse.
           </p>
 
-          <p className="mt-6 text-xl text-amber-100">
-            Aparece <span className="font-bold italic">Purgatorius</span>,
-            cercano al origen de los primates.
+          <p className="mt-4 max-w-3xl text-base leading-relaxed text-amber-100 md:mt-6 md:text-xl">
+            Aparece <span className="font-bold italic">Purgatorius</span>, cercano al
+            origen de los primates.
           </p>
         </div>
 
-        {/* JUEGO */}
-        <aside className="flex flex-col justify-center rounded-[2rem] border border-amber-900/50 bg-stone-950/65 p-7 shadow-2xl backdrop-blur-md">
-          
-          <h3 className="font-serif text-3xl font-black text-white">
+        <aside className="panel-juego">
+          <p className="mb-3 font-serif text-sm uppercase tracking-[0.35em] text-amber-600">
+            Juego colectivo
+          </p>
+
+          <h3 className="font-serif text-xl font-black uppercase tracking-[0.08em] text-stone-100 md:text-2xl">
             ¿Cuál fue la ventaja?
           </h3>
 
-          <div className="mt-6 grid gap-3">
+          <div className="mt-4 grid gap-3 md:mt-5">
             {opciones.map((opcion, index) => {
               const seleccionada = respuesta === index;
               const mostrarCorrecta = respuesta !== null && opcion.correcta;
@@ -70,7 +67,7 @@ export default function Bloque2Mamiferos({ onBack, onNext }) {
                 <button
                   key={index}
                   onClick={() => setRespuesta(index)}
-                  className={`rounded-2xl border px-5 py-4 text-left font-serif text-lg uppercase tracking-[0.12em] transition ${
+                  className={`rounded-2xl border px-4 py-3 text-left font-serif text-sm uppercase tracking-[0.12em] transition md:px-5 md:text-base ${
                     mostrarCorrecta
                       ? "border-emerald-500 bg-emerald-900/50 text-emerald-100"
                       : seleccionada
@@ -86,22 +83,24 @@ export default function Bloque2Mamiferos({ onBack, onNext }) {
 
           {respuesta !== null && (
             <>
-              <div className="mt-6 bg-black/40 p-5 rounded-2xl">
-                <p className="text-amber-100 text-lg">
+              <div className="mt-4 rounded-2xl border border-amber-900/50 bg-black/40 p-4 md:mt-5">
+                <p className="text-amber-100">
                   La clave fue adaptarse.
+                </p>
+                <p className="mt-2 text-sm leading-relaxed text-stone-300">
+                  Los mamíferos no ganaron por tamaño. Ganaron porque pudieron ocupar
+                  espacios nuevos: ramas, madrigueras, noches, semillas, insectos y refugios.
                 </p>
               </div>
 
-              {/* BOTÓN SIGUIENTE */}
-              <button onClick={onNext} className="group boton-paleo mt-6">
+              <button onClick={onNext} className="group boton-paleo mt-4 md:mt-5">
                 <span className="boton-overlay" />
                 <span className="relative">Siguiente etapa →</span>
               </button>
             </>
           )}
 
-          {/* VOLVER */}
-          <button onClick={onBack} className="group boton-paleo mt-6">
+          <button onClick={onBack} className="group boton-paleo mt-4 md:mt-5">
             <span className="boton-overlay" />
             <span className="relative">← Volver</span>
           </button>

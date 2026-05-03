@@ -6,89 +6,89 @@ export default function Bloque7Encefalizacion({ onBack, onNext }) {
   const opciones = [
     { texto: "Ser más fuertes físicamente", correcta: false },
     { texto: "Pensar, aprender y planificar mejor", correcta: true },
-    { texto: "Volar entre los árboles", correcta: false },
+    { texto: "Volar entre árboles", correcta: false },
     { texto: "Respirar bajo el agua", correcta: false },
   ];
 
   return (
-    <section className="relative min-h-screen w-screen overflow-hidden bg-black text-white">
+    <section className="pantalla-bloque">
       <img
         src="/imagenes/encefalizacion.jpg"
-        alt="Proceso de encefalización humana"
+        alt="Evolución del cerebro humano"
         className="absolute inset-0 h-full w-full object-cover"
       />
 
       <div className="absolute inset-0 bg-black/55" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_20%,rgba(0,0,0,0.9)_100%)]" />
 
-      <div className="relative z-10 grid min-h-screen grid-cols-1 gap-8 px-8 py-8 md:grid-cols-[1fr_430px]">
+      <div className="layout-bloque">
+        {/* TEXTO */}
         <div className="flex flex-col justify-center">
           <p className="mb-4 text-sm uppercase tracking-[0.45em] text-amber-600">
             Bloque 7
           </p>
 
-          <h2 className="font-serif text-5xl font-black uppercase leading-[0.95] tracking-[0.16em] text-stone-100 md:text-7xl">
+          <h2 className="titulo-bloque">
             El cerebro
             <br />
             en expansión
           </h2>
 
-          <div className="my-8 flex items-center gap-5 text-amber-700">
-            <span className="h-px w-24 bg-amber-700/70" />
-            <span className="text-3xl">◇</span>
-            <span className="h-px w-24 bg-amber-700/70" />
+          <div className="my-6 flex items-center gap-4 text-amber-700 md:my-8 md:gap-5">
+            <span className="h-px w-16 bg-amber-700/70 md:w-24" />
+            <span className="text-2xl md:text-3xl">◇</span>
+            <span className="h-px w-16 bg-amber-700/70 md:w-24" />
           </div>
 
-          <p className="max-w-3xl text-2xl leading-relaxed text-stone-200">
-            La encefalización fue el aumento progresivo del tamaño y la complejidad
-            del cerebro en nuestra línea evolutiva.
+          <p className="texto-bloque">
+            A lo largo de la evolución, el cerebro humano aumentó en tamaño y complejidad.
           </p>
 
-          <p className="mt-6 max-w-3xl text-xl leading-relaxed text-amber-100">
-            No solo cambiamos por fuera: también cambió nuestra capacidad de recordar,
-            aprender, imaginar, planificar y cooperar.
+          <p className="mt-4 max-w-3xl text-base leading-relaxed text-amber-100 md:mt-6 md:text-xl">
+            Este proceso permitió desarrollar memoria, aprendizaje, planificación y nuevas formas de interacción.
           </p>
 
-          <div className="mt-8 grid max-w-4xl gap-4 md:grid-cols-3">
-            <div className="rounded-2xl border border-amber-900/50 bg-stone-950/55 p-5 backdrop-blur-md">
-              <p className="font-serif text-sm uppercase tracking-[0.25em] text-amber-600">
+          <div className="mt-6 grid max-w-4xl gap-3 md:grid-cols-3 md:gap-4">
+            <div className="rounded-2xl border border-amber-900/50 bg-stone-950/55 p-4 backdrop-blur-md">
+              <p className="font-serif text-xs uppercase tracking-[0.25em] text-amber-600 md:text-sm">
                 Memoria
               </p>
-              <p className="mt-2 text-stone-200">
-                Recordar lugares, rutas, peligros y recursos.
+              <p className="mt-1 text-sm text-stone-200 md:text-base">
+                Recordar y aprender del pasado.
               </p>
             </div>
 
-            <div className="rounded-2xl border border-amber-900/50 bg-stone-950/55 p-5 backdrop-blur-md">
-              <p className="font-serif text-sm uppercase tracking-[0.25em] text-amber-600">
+            <div className="rounded-2xl border border-amber-900/50 bg-stone-950/55 p-4 backdrop-blur-md">
+              <p className="font-serif text-xs uppercase tracking-[0.25em] text-amber-600 md:text-sm">
                 Aprendizaje
               </p>
-              <p className="mt-2 text-stone-200">
-                Observar, imitar, corregir y transmitir habilidades.
+              <p className="mt-1 text-sm text-stone-200 md:text-base">
+                Observar, imitar y mejorar.
               </p>
             </div>
 
-            <div className="rounded-2xl border border-amber-900/50 bg-stone-950/55 p-5 backdrop-blur-md">
-              <p className="font-serif text-sm uppercase tracking-[0.25em] text-amber-600">
+            <div className="rounded-2xl border border-amber-900/50 bg-stone-950/55 p-4 backdrop-blur-md">
+              <p className="font-serif text-xs uppercase tracking-[0.25em] text-amber-600 md:text-sm">
                 Planificación
               </p>
-              <p className="mt-2 text-stone-200">
-                Anticipar el futuro y resolver problemas antes de que ocurran.
+              <p className="mt-1 text-sm text-stone-200 md:text-base">
+                Anticipar y resolver problemas.
               </p>
             </div>
           </div>
         </div>
 
-        <aside className="flex max-h-[calc(100vh-4rem)] flex-col justify-center rounded-[2rem] border border-amber-900/50 bg-stone-950/65 p-6 shadow-2xl backdrop-blur-md">
+        {/* PANEL */}
+        <aside className="panel-juego">
           <p className="mb-3 font-serif text-sm uppercase tracking-[0.35em] text-amber-600">
             Juego colectivo
           </p>
 
-          <h3 className="font-serif text-2xl font-black uppercase tracking-[0.08em] text-stone-100">
-            ¿Qué permitió el cerebro en expansión?
+          <h3 className="font-serif text-xl font-black uppercase tracking-[0.08em] text-stone-100 md:text-2xl">
+            ¿Qué permitió el crecimiento del cerebro?
           </h3>
 
-          <div className="mt-5 grid gap-3">
+          <div className="mt-4 grid gap-3 md:mt-5">
             {opciones.map((opcion, index) => {
               const seleccionada = respuesta === index;
               const mostrarCorrecta = respuesta !== null && opcion.correcta;
@@ -97,7 +97,7 @@ export default function Bloque7Encefalizacion({ onBack, onNext }) {
                 <button
                   key={index}
                   onClick={() => setRespuesta(index)}
-                  className={`rounded-2xl border px-5 py-3 text-left font-serif text-base uppercase tracking-[0.12em] transition ${
+                  className={`rounded-2xl border px-4 py-3 text-left font-serif text-sm uppercase tracking-[0.12em] transition md:px-5 md:text-base ${
                     mostrarCorrecta
                       ? "border-emerald-500 bg-emerald-900/50 text-emerald-100"
                       : seleccionada
@@ -113,25 +113,23 @@ export default function Bloque7Encefalizacion({ onBack, onNext }) {
 
           {respuesta !== null && (
             <>
-              <div className="mt-5 rounded-2xl border border-amber-900/50 bg-black/40 p-4">
-                <p className="text-lg text-amber-100">
+              <div className="mt-4 rounded-2xl border border-amber-900/50 bg-black/40 p-4 md:mt-5">
+                <p className="text-amber-100">
                   La clave fue pensar mejor.
                 </p>
-                <p className="mt-2 text-sm leading-relaxed text-stone-300">
-                  Un cerebro más complejo permitió aprender de otros, anticipar peligros,
-                  planificar acciones y crear soluciones nuevas. Ese paso prepara el camino
-                  hacia las herramientas de Homo habilis.
+                <p className="mt-2 text-sm text-stone-300">
+                  Un cerebro más complejo permitió aprender, anticipar y adaptarse mejor al entorno.
                 </p>
               </div>
 
-              <button onClick={onNext} className="group boton-paleo mt-5">
+              <button onClick={onNext} className="group boton-paleo mt-4 md:mt-5">
                 <span className="boton-overlay" />
                 <span className="relative">Siguiente etapa →</span>
               </button>
             </>
           )}
 
-          <button onClick={onBack} className="group boton-paleo mt-5">
+          <button onClick={onBack} className="group boton-paleo mt-4 md:mt-5">
             <span className="boton-overlay" />
             <span className="relative">← Volver</span>
           </button>
