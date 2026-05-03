@@ -56,9 +56,9 @@ export default function PantallaInicio({ onStart }) {
           </div>
 
           <h1 className="font-serif text-4xl font-black uppercase leading-[0.95] tracking-[0.14em] text-stone-100 drop-shadow-[0_8px_25px_rgba(0,0,0,0.95)] sm:text-5xl md:text-7xl lg:text-8xl lg:tracking-[0.2em]">
-            De la nada
+           Nuestro origen
             <br />
-            a nosotros
+            comun
           </h1>
 
           <button
